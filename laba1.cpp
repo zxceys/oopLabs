@@ -4,7 +4,7 @@ using namespace std;
 
 
 
-void fillArray(int(&a)[10])
+/*void fillArray(int(&a)[10])
 {
     for(int i{}; i < 10; i++) 
     {
@@ -61,4 +61,40 @@ int main()
     multiplyByTwo(masiv);
     
     return 0;
+}*/
+
+
+
+void process(int*& arr, int size)
+{
+    for(int i{}; i < size; i++)
+    {
+        if(arr[i] < 0)
+        {
+            int* arr1 = new int[i]{};
+            for(int d{}; d < i; d++)
+            {
+                arr1[d] = arr[i];
+                arr1[d] = arr[i];
+                arr1[d] = arr[i];
+                
+            }
+        }
+        
+    }
+
+
+
+}
+
+
+
+
+int main()
+{
+    int n;
+    cout << "Vedite razmer masiva = ";
+    cin >> n;
+    int* arr = new int[n]{}
+
 }
