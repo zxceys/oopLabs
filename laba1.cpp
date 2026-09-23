@@ -61,7 +61,7 @@ int main()
     multiplyByTwo(masiv);
     
     return 0;
-}*/
+}
 
 
 
@@ -132,4 +132,106 @@ int main()
     arr = nullptr;
 
     return 0;
+}*/
+
+
+struct SafeArray
+{
+    int* data;
+    int size;
+};
+
+SafeArray createArray(int size)
+{
+    SafeArray arr;
+    arr.size = size;
+    arr.data = new int[size]{};
+
+    return arr;
 }
+
+int& getElement(SafeArray& arr, int index)
+{
+    static int zaglushka = 0;
+    if (index < 0 || index >= arr.size)
+    {
+        cout << "out of range";
+        return zaglushka;
+    }
+    else
+        return arr.data[index];
+}
+
+void printSafe(const SafeArray& arr)
+{
+     for (int i{}; i < arr.size; i++)
+    {
+        cout << arr.data[i] << " ";
+    }
+    
+    cout << endl;
+}
+
+
+void reSizeArray(SafeArray& arr, int M)
+{
+    int N = arr.size;
+
+    cout << "Vvedite noviy razmer: ";
+    cin >> M;
+
+    if (M < N)
+    {
+        for (int i = M; i < N; i++)
+        {
+            cout << arr.data[i] << " ";
+        }
+
+        int* data1 = new int[M]{};
+
+        for (int j{}; j < M; j++)
+        {
+            data1[j] = arr.data[j];
+        }
+
+        delete[] arr.data;
+        arr.data = data1;
+        arr.size = M;
+    }
+    else if (M > N)
+    {
+        int* data1 = new int[M]{};
+
+        for (int j{}; j < N; j++)
+        {
+            data1[j] = arr.data[j];
+        }
+
+        delete[] arr.data;
+        arr.data = data1;
+        arr.size = M;
+    }
+    else
+    {
+        cout << "Razmer ne izmenilsya" << endl;
+    }
+}
+    
+
+
+
+
+int main()
+{
+    SafeArray myArr = createArray(5);
+    getElement(myArr, 2) = 77;
+    printSafe(myArr);
+    reSizeArray(myArr, 0);
+    cout << endl;
+    printSafe(myArr);
+    delete[] myArr.data;
+    myArr.data = nullptr;
+
+
+
+} 
