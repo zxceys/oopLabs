@@ -1,0 +1,370 @@
+\doxysection{laba1.\+cpp File Reference}
+\hypertarget{laba1_8cpp}{}\label{laba1_8cpp}\index{laba1.cpp@{laba1.cpp}}
+{\ttfamily \+\#include $<$stdio.\+h$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}}
+\begin{DoxyCompactList}\small\item\em структура безопасного динамического массива \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a65ced0fd8e6787b721ffaf8dfa52ef69}{fill\+Array}} (int(\&a)\+[10]\+)
+\begin{DoxyCompactList}\small\item\em заполняет статический массив значениями \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_ae1a48062ce768d8de04ad673cce13473}{print\+Array}} (int(\&a)\+[10]\+)
+\begin{DoxyCompactList}\small\item\em выводит статический массив на экран \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a0e5472c661960a793e4b2d2c3edefd94}{swap\+Elements}} (int(\&a)\+[10]\+)
+\begin{DoxyCompactList}\small\item\em меняет местами два элемента массива по индексам \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a6fa493b174c2d4e86ee8ae42e07c9f1b}{multiply\+By\+Two}} (int(\&a)\+[10]\+)
+\begin{DoxyCompactList}\small\item\em умножает каждый элемент массива на 2 \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{laba1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em основная функция первого задания \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a895bffcc41bd8e93cb0e6aa7af5c79d3}{process}} (int \texorpdfstring{$\ast$}{*}\&arr, int \&size)
+\begin{DoxyCompactList}\small\item\em обрабатывает динамический массив до первого отрицательного элемента \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_afb57a71e4842c0c993de2536bb829262}{print\+Array}} (int \texorpdfstring{$\ast$}{*}arr, int size)
+\begin{DoxyCompactList}\small\item\em выводит динамический массив на экран \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \doxymbox{\hyperlink{laba1_8cpp_a7ff63be79ad745808c2835d23619453c}{create\+Array}} (int size)
+\begin{DoxyCompactList}\small\item\em создает безопасный динамический массив \end{DoxyCompactList}\item 
+int \& \doxymbox{\hyperlink{laba1_8cpp_a96b5fa358374961176edf6d8e54cfe1d}{get\+Element}} (\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr, int index)
+\begin{DoxyCompactList}\small\item\em возвращает элемент массива по индексу \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a7351a105bbeff3b7b137f744fb529256}{print\+Safe}} (const \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr)
+\begin{DoxyCompactList}\small\item\em выводит безопасный массив на экран \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a77274a03ecb582ce90c14fc459bfbc13}{re\+Size\+Array}} (\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&arr, int M)
+\begin{DoxyCompactList}\small\item\em изменяет размер динамического массива \end{DoxyCompactList}\item 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{laba1_8cpp_a316a1e4a31e8d114fc40e8a6d5cf6d1f}{allocate\+Matrix}} (int rows, int cols)
+\begin{DoxyCompactList}\small\item\em выделяет память под двумерный массив \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a57b3e14ecd6179a364c9e60ca2131531}{fill\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols)
+\begin{DoxyCompactList}\small\item\em заполняет двумерный массив оценками \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a8eb1f7a0cdbc814d915bc187ef0c4709}{print\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows, int cols, bool show\+Borders=true, string title="{}Matrix"{})
+\begin{DoxyCompactList}\small\item\em выводит двумерный массив на экран \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{laba1_8cpp_a29b6394c95f08e982275bdcd9b919ef0}{free\+Matrix}} (int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}matrix, int rows)
+\begin{DoxyCompactList}\small\item\em освобождает память двумерного массива \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{laba1_8cpp_doc-func-members}
+\Hypertarget{laba1_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{laba1_8cpp_a316a1e4a31e8d114fc40e8a6d5cf6d1f}\index{laba1.cpp@{laba1.cpp}!allocateMatrix@{allocateMatrix}}
+\index{allocateMatrix@{allocateMatrix}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{allocateMatrix()}{allocateMatrix()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a316a1e4a31e8d114fc40e8a6d5cf6d1f} 
+int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} allocate\+Matrix (\begin{DoxyParamCaption}\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+выделяет память под двумерный массив 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rows} & количество строк \\
+\hline
+{\em cols} & количество столбцов \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+указатель на созданную матрицу 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00325}{325}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a7ff63be79ad745808c2835d23619453c}\index{laba1.cpp@{laba1.cpp}!createArray@{createArray}}
+\index{createArray@{createArray}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{createArray()}{createArray()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a7ff63be79ad745808c2835d23619453c} 
+\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} create\+Array (\begin{DoxyParamCaption}\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+создает безопасный динамический массив 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & размер массива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+созданная структура \doxylink{struct_safe_array}{Safe\+Array} 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00196}{196}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a65ced0fd8e6787b721ffaf8dfa52ef69}\index{laba1.cpp@{laba1.cpp}!fillArray@{fillArray}}
+\index{fillArray@{fillArray}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{fillArray()}{fillArray()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a65ced0fd8e6787b721ffaf8dfa52ef69} 
+void fill\+Array (\begin{DoxyParamCaption}\item[{int(\&)}]{a}{\+[10]}\end{DoxyParamCaption})}
+
+
+
+заполняет статический массив значениями 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & массив из 10 элементов \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00012}{12}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a57b3e14ecd6179a364c9e60ca2131531}\index{laba1.cpp@{laba1.cpp}!fillMatrix@{fillMatrix}}
+\index{fillMatrix@{fillMatrix}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{fillMatrix()}{fillMatrix()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a57b3e14ecd6179a364c9e60ca2131531} 
+void fill\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{}\end{DoxyParamCaption})}
+
+
+
+заполняет двумерный массив оценками 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & двумерный массив \\
+\hline
+{\em rows} & количество строк \\
+\hline
+{\em cols} & количество столбцов \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00344}{344}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a29b6394c95f08e982275bdcd9b919ef0}\index{laba1.cpp@{laba1.cpp}!freeMatrix@{freeMatrix}}
+\index{freeMatrix@{freeMatrix}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{freeMatrix()}{freeMatrix()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a29b6394c95f08e982275bdcd9b919ef0} 
+void free\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{}\end{DoxyParamCaption})}
+
+
+
+освобождает память двумерного массива 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & двумерный массив \\
+\hline
+{\em rows} & количество строк \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00401}{401}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a96b5fa358374961176edf6d8e54cfe1d}\index{laba1.cpp@{laba1.cpp}!getElement@{getElement}}
+\index{getElement@{getElement}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a96b5fa358374961176edf6d8e54cfe1d} 
+int \& get\+Element (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{, }\item[{int}]{index}{}\end{DoxyParamCaption})}
+
+
+
+возвращает элемент массива по индексу 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & безопасный массив \\
+\hline
+{\em index} & индекс элемента \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ссылка на элемент массива или заглушку 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00213}{213}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{laba1.cpp@{laba1.cpp}!main@{main}}
+\index{main@{main}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+основная функция первого задания 
+
+основная функция четвертого задания
+
+основная функция третьего задания
+
+основная функция второго задания
+
+\begin{DoxyReturn}{Returns}
+код завершения программы 
+\end{DoxyReturn}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00084}{84}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a6fa493b174c2d4e86ee8ae42e07c9f1b}\index{laba1.cpp@{laba1.cpp}!multiplyByTwo@{multiplyByTwo}}
+\index{multiplyByTwo@{multiplyByTwo}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{multiplyByTwo()}{multiplyByTwo()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a6fa493b174c2d4e86ee8ae42e07c9f1b} 
+void multiply\+By\+Two (\begin{DoxyParamCaption}\item[{int(\&)}]{a}{\+[10]}\end{DoxyParamCaption})}
+
+
+
+умножает каждый элемент массива на 2 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & массив из 10 элементов \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00068}{68}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_afb57a71e4842c0c993de2536bb829262}\index{laba1.cpp@{laba1.cpp}!printArray@{printArray}}
+\index{printArray@{printArray}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{printArray()}{printArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{laba1_8cpp_afb57a71e4842c0c993de2536bb829262} 
+void print\+Array (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{arr}{, }\item[{int}]{size}{}\end{DoxyParamCaption})}
+
+
+
+выводит динамический массив на экран 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & указатель на массив \\
+\hline
+{\em size} & размер массива \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00133}{133}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_ae1a48062ce768d8de04ad673cce13473}\index{laba1.cpp@{laba1.cpp}!printArray@{printArray}}
+\index{printArray@{printArray}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{printArray()}{printArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{laba1_8cpp_ae1a48062ce768d8de04ad673cce13473} 
+void print\+Array (\begin{DoxyParamCaption}\item[{int(\&)}]{a}{\+[10]}\end{DoxyParamCaption})}
+
+
+
+выводит статический массив на экран 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & массив из 10 элементов \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00025}{25}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a8eb1f7a0cdbc814d915bc187ef0c4709}\index{laba1.cpp@{laba1.cpp}!printMatrix@{printMatrix}}
+\index{printMatrix@{printMatrix}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{printMatrix()}{printMatrix()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a8eb1f7a0cdbc814d915bc187ef0c4709} 
+void print\+Matrix (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{matrix}{, }\item[{int}]{rows}{, }\item[{int}]{cols}{, }\item[{bool}]{show\+Borders}{ = {\ttfamily true}, }\item[{string}]{title}{ = {\ttfamily "{}Matrix"{}}}\end{DoxyParamCaption})}
+
+
+
+выводит двумерный массив на экран 
+
+
+\begin{DoxyParams}{Parameters}
+{\em matrix} & двумерный массив \\
+\hline
+{\em rows} & количество строк \\
+\hline
+{\em cols} & количество столбцов \\
+\hline
+{\em show\+Borders} & вывод рамки \\
+\hline
+{\em title} & заголовок матрицы \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00366}{366}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a7351a105bbeff3b7b137f744fb529256}\index{laba1.cpp@{laba1.cpp}!printSafe@{printSafe}}
+\index{printSafe@{printSafe}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{printSafe()}{printSafe()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a7351a105bbeff3b7b137f744fb529256} 
+void print\+Safe (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{}\end{DoxyParamCaption})}
+
+
+
+выводит безопасный массив на экран 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & массив для вывода \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00233}{233}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a895bffcc41bd8e93cb0e6aa7af5c79d3}\index{laba1.cpp@{laba1.cpp}!process@{process}}
+\index{process@{process}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a895bffcc41bd8e93cb0e6aa7af5c79d3} 
+void process (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}\&}]{arr}{, }\item[{int \&}]{size}{}\end{DoxyParamCaption})}
+
+
+
+обрабатывает динамический массив до первого отрицательного элемента 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & указатель на динамический массив \\
+\hline
+{\em size} & размер массива \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00104}{104}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a77274a03ecb582ce90c14fc459bfbc13}\index{laba1.cpp@{laba1.cpp}!reSizeArray@{reSizeArray}}
+\index{reSizeArray@{reSizeArray}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{reSizeArray()}{reSizeArray()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a77274a03ecb582ce90c14fc459bfbc13} 
+void re\+Size\+Array (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_safe_array}{Safe\+Array}} \&}]{arr}{, }\item[{int}]{M}{}\end{DoxyParamCaption})}
+
+
+
+изменяет размер динамического массива 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & безопасный массив \\
+\hline
+{\em M} & новый размер массива \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00249}{249}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
+\Hypertarget{laba1_8cpp_a0e5472c661960a793e4b2d2c3edefd94}\index{laba1.cpp@{laba1.cpp}!swapElements@{swapElements}}
+\index{swapElements@{swapElements}!laba1.cpp@{laba1.cpp}}
+\doxysubsubsection{\texorpdfstring{swapElements()}{swapElements()}}
+{\footnotesize\ttfamily \label{laba1_8cpp_a0e5472c661960a793e4b2d2c3edefd94} 
+void swap\+Elements (\begin{DoxyParamCaption}\item[{int(\&)}]{a}{\+[10]}\end{DoxyParamCaption})}
+
+
+
+меняет местами два элемента массива по индексам 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & массив из 10 элементов \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \doxymbox{\hyperlink{laba1_8cpp_source_l00042}{42}} of file \doxymbox{\hyperlink{laba1_8cpp_source}{laba1.\+cpp}}.
+
