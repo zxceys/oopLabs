@@ -1,0 +1,38 @@
+@startuml
+
+enum VehicleStatus {
+    Working
+    Broken
+}
+
+class Vehicle {
+    - brand : string
+    - year : int
+    - kilometers : double
+    - engineStarted : bool
+    - status : VehicleStatus
+    - objectCount : int
+
+    + Vehicle()
+    + Vehicle(brand : string, year : int)
+    + Vehicle(brand : string, year : int, kilometers : double, status : VehicleStatus)
+    + ~Vehicle()
+
+    + getBrand() : string
+    + getYear() : int
+    + getKilometers() : double
+    + isEngineStarted() : bool
+    + getStatus() : VehicleStatus
+
+    + startEngine() : void
+    + stopEngine() : void
+    + drive(distance : double) : void
+    + breakCar() : void
+    + repairCar() : void
+    + printInfo() : void
+    + getObjectCount() : int
+}
+
+Vehicle --> VehicleStatus
+
+@enduml
